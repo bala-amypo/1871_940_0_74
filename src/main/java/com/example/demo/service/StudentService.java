@@ -5,5 +5,5 @@ import org.stringframework.stereotype.service;
 
 @Service
 public interface StudentService {
-
+    
 }
