@@ -1,4 +1,4 @@
-package com.example.demo.StudentServiceImplementation;
+package com.example.demo.StudentServiceImple;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -8,10 +8,10 @@ import com.example.demo.repository.StudentRepository;
 import com.example.demo.service.StudentService;
 
 @Service
-public class StudentServiceImplementation implements StudentService{
+public class StudentServiceImple implements StudentService{
 
     // private final StudentRepository StudentRepository;
-    // public StudentServiceImplementation(StudentRepository studentRepository){
+    // public StudentServiceImplem(StudentRepository studentRepository){
     //     this.studentRepository=studentRepository;
     // }
 
