@@ -1,5 +1,11 @@
 package com.example.demo.entity;
 
+import jakarta.persistence.*;
+
+@entity
+@Table(name = "users")
+
+
 public class Student {
     private int id;
     private String name;
