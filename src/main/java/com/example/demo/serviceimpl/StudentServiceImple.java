@@ -1,6 +1,4 @@
-package com.example.demo.serviceimpl;
-
-import java.util.List;
+package com.example.demo.Serviceimpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,27 +9,11 @@ import com.example.demo.service.StudentService;
 
 @Service
 public class StudentServiceImple implements StudentService {
-
     @Autowired
-    private StudentRepository studentRepository;
+    StudentRepository studentRepository;
 
-    @Override
-    public Student save(Student student) {
+    public Student saveStudent(Student student){
         return studentRepository.save(student);
     }
-
-    @Override
-    public List<Student> getAll() {
-        return studentRepository.findAll();
-    }
-
-    @Override
-    public Student getById(Long id) {
-        return studentRepository.findById(id).orElse(null);
-    }
-
-    @Override
-    public void deletedata(Long id) {
-        studentRepository.deleteById(id);
-    }
+    
 }
