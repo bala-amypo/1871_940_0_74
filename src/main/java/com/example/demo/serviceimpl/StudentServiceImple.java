@@ -1,5 +1,7 @@
 package com.example.demo.serviceimpl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,17 +10,28 @@ import com.example.demo.repository.StudentRepository;
 import com.example.demo.service.StudentService;
 
 @Service
-public class StudentServiceImple implements StudentService{
-
-    // private final Studenmvn tRepository StudentRepository;
-    // public StudentServiceImplem(StudentRepository studentRepository){
-    //     this.studentRepository=studentRepository;
-    // }
+public class StudentServiceImple implements StudentService {
 
     @Autowired
-    StudentRepository studentRepository;
+    private StudentRepository studentRepository;
 
-    public Student saverStudent(Student student){
+    @Override
+    public Student save(Student student) {
         return studentRepository.save(student);
+    }
+
+    @Override
+    public List<Student> getAll() {
+        return studentRepository.findAll();
+    }
+
+    @Override
+    public Student getById(Long id) {
+        return studentRepository.findById(id).orElse(null);
+    }
+
+    @Override
+    public void deletedata(Long id) {
+        studentRepository.deleteById(id);
     }
 }
